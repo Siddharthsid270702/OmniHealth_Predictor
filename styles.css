@@ -1,0 +1,153 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #004d99;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header .logo h1 {
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.welcome-section {
+    text-align: center;
+    padding: 50px;
+}
+
+.welcome-section .btn {
+    background-color: #004d99;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.welcome-section .btn:hover {
+    background-color: #003366;
+}
+
+.form-container {
+    width: 50%;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-container .form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container .form input,
+.form-container .form button {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.form-container .form button {
+    background-color: #004d99;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.form-container .form button:hover {
+    background-color: #003366;
+}
+
+.error {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dashboard .symptom-select select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.dashboard .btn {
+    background-color: #004d99;
+    color: #fff;
+    padding: 12px 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.dashboard .btn:hover {
+    background-color: #003366;
+}
+
+.patient-history table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.patient-history table, th, td {
+    border: 1px solid #ddd;
+}
+
+.patient-history th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+.patient-history th {
+    background-color: #004d99;
+    color: white;
+}

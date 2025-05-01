@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <div class="welcome-section">
+        <h2>Welcome to the Disease Prediction System</h2>
+        <p><a href="{{ url_for('signup') }}" class="btn">Signup</a> or <a href="{{ url_for('login') }}" class="btn">Login</a> to continue.</p>
+    </div>
+{% endblock %}

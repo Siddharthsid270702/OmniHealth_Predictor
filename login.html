@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+    <div class="form-container">
+        <h2>Login</h2>
+        <form action="/login" method="POST" class="form">
+            <label for="identifier">Patient ID or Email:</label>
+            <input type="text" name="identifier" required><br>
+
+            <label for="password">Password:</label>
+            <input type="password" name="password" required><br>
+
+            <button type="submit" class="btn">Login</button>
+        </form>
+
+        {% if message %}
+            <p class="error">{{ message }}</p>
+        {% endif %}
+    </div>
+{% endblock %}

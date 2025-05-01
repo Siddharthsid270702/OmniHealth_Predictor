@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+    <div class="dashboard">
+        <h2>Disease Prediction</h2>
+
+        <!-- Symptom Selection Form -->
+        <form method="POST" class="form">
+            <label>Select Symptoms (Max 4):</label>
+            <div class="symptom-select">
+                {% for i in range(1, 5) %}
+                    <select name="symptom{{ i }}">
+                        <option>-select-</option>
+                        {% for symptom in symptoms %}
+                            <option value="{{ symptom }}">{{ symptom }}</option>
+                        {% endfor %}
+                    </select>
+                {% endfor %}
+            </div>
+            <button type="submit" class="btn">Predict</button>
+        </form>
+
+        <!-- Patient History Button -->
+        <form action="{{ url_for('patient_history') }}" method="get">
+            <button type="submit" class="btn">Patient History</button>
+        </form>
+
+        <!-- Display Prediction -->
+        {% if prediction %}
+            <h3>Prediction: {{ prediction }}</h3>
+            <p><strong>Description:</strong> {{ description }}</p>
+            <h4>Precautions:</h4>
+            <ul>
+                {% for precaution in precautions %}
+                    <li>{{ precaution }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+        <!-- Display Patient History -->
+        {% if history %}
+            <h2>Patient History</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Prediction Time</th>
+                        <th>Symptoms</th>
+                        <th>Predicted Disease</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for record in history %}
+                    <tr>
+                        <td>{{ record.prediction_time }}</td>
+                        <td>{{ record.symptom1 }}, {{ record.symptom2 }}, {{ record.symptom3 }}, {{ record.symptom4 }}</td>
+                        <td>{{ record.predicted_disease }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% endif %}
+    </div>
+{% endblock %}

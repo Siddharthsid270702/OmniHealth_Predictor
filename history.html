@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}Patient History{% endblock %}
+
+{% block content %}
+    <div class="patient-history">
+        <h2>Your Past Predictions</h2>
+
+        {% if history %}
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Symptom 1</th>
+                        <th>Symptom 2</th>
+                        <th>Symptom 3</th>
+                        <th>Symptom 4</th>
+                        <th>Predicted Disease</th>
+                        <th>Prediction Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for record in history %}
+                    <tr>
+                        <td>{{ record.symptom1 }}</td>
+                        <td>{{ record.symptom2 }}</td>
+                        <td>{{ record.symptom3 }}</td>
+                        <td>{{ record.symptom4 }}</td>
+                        <td>{{ record.predicted_disease }}</td>
+                        <td>{{ record.prediction_time }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>No history found.</p>
+        {% endif %}
+
+        <form action="{{ url_for('dashboard') }}" method="GET">
+            <button type="submit" class="btn">Diagnose Another Disease</button>
+        </form>
+    </div>
+{% endblock %}
