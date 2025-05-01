@@ -1,11 +1,11 @@
-# Omni Health Predictor 🧠💊
+# Omni Health Predictor 
 
 Omni Health Predictor is a machine learning-powered web application that predicts possible diseases based on user-selected symptoms. It uses trained models and symptom mapping to deliver quick and reliable health predictions.
 
  **Achieved 99.32% accuracy** using Random Forest Classifier on a well-structured medical symptom dataset.
 ---
 
-## 🚀 Features
+##  Features
 
 -  Predicts diseases based on selected symptoms
 -  Trained with multiple machine learning algorithms for accuracy
@@ -15,7 +15,7 @@ Omni Health Predictor is a machine learning-powered web application that predict
 
 ---
 
-## 🔧 Tech Stack
+##  Tech Stack
 
 - Python 3.x
 - Scikit-learn
@@ -26,7 +26,7 @@ Omni Health Predictor is a machine learning-powered web application that predict
 
 ---
 
-## 🏥 Dataset
+##  Dataset
 
 - Source: Kaggle
 - Columns: `Symptom1`, `Symptom2`, ..., `Symptom17`, `Prognosis`
